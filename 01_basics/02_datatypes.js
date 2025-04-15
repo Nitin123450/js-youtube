@@ -12,6 +12,6 @@ let b = false // boolean (true/false)
 let we = null // null is a standalone value means empty (null is type of object )
               // symbol (used for uniqueness)
 
-  console.log(typeof name)            
+  console.log(typeof name)    // string         
 
 
