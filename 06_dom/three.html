@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body>
+</body>
+    
+
+    <script>
+    //     const div = document.createElement('div')
+    //     console.log(div)
+    //     div.className = "main"
+    //     div.id = Math.floor(Math.random()*10 +1)
+    //     div.style.backgroundColor = "green"
+    //     div.setAttribute("title" , "div-container")
+    //     div.style.padding = '12px'
+    //     // div.innerText = "chai Aur code"    
+    //    const textNode =  document.createTextNode("chai aur code")    // better way to add text 
+    //    div.appendChild(textNode)     // adding text node to div
+
+    //    document.body.appendChild(div)    // adding div to body 
+
+      // Example 
+      
+       const arr1 = ['Nitin' , 'sahil', 'gaurav']
+       const arr2 = ['green' , 'blue' , 'yellow']
+
+       arr1.forEach( (text,index) => multipleButtons(text,arr2[index]) );
+
+       function multipleButtons (text , bgColor) {
+          const button = document.createElement('button')
+          console.log(button)
+          button.setAttribute('class' , 'main')
+          button.setAttribute('type' , 'submit')
+          button.style.backgroundColor = `${bgColor}`
+          button.style.padding = '20px'
+          button.style.borderRadius = '10px'
+          const textNode = document.createTextNode(`${text}`)
+          button.appendChild(textNode)
+          document.body.appendChild(button)
+
+       }
+
+    </script>
+
+</html>
