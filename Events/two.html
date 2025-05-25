@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async functions </title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">stop</button>
+    <script>
+
+        // After a particular time this setTimeout function executes 
+      
+    //   setTimeout(function(){      // passing the call back 
+    //     console.log('Nitin')
+    //   },2000)
+    
+        sayName = function(){
+        console.log('Nitin')
+     }
+
+    //  setTimeout(sayName,2000)      // passing the reference 
+
+   const changeText = function (){
+    document.querySelector('h1').innerHTML = 'best javaScript course'
+   }
+       const changeMe = setTimeout(changeText , 2000)
+
+       // clearTimeout() --> to stop the setTimeout function
+    //    clearTimeout(changeMe)      // we have to pass a reference 
+
+     document.querySelector('#stop').addEventListener('click' , function(){
+        clearTimeout(changeMe)
+        console.log('stopped')
+    })
+    </script>
+</body>
+</html>

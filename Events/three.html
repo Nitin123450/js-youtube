@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async functions </title>
+</head>
+<body>
+    <h1>Chai Aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">stop</button>
+
+    <script>
+
+        
+       
+        document.querySelector("#start").addEventListener("click", function () {
+        const start = function () {
+          console.log("Nitin", Date.now());
+        };
+        const toStop = setInterval(start, 1000, (click = start));
+
+        document.querySelector("#stop").addEventListener("click", function () {
+          clearInterval(toStop);
+        });
+      });
+     </script>
+</body>
+</html>
